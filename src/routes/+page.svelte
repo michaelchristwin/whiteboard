@@ -7,10 +7,9 @@
 		if (!ctx) {
 			return new Error('Context unavailable');
 		}
-		ctx.fillStyle = 'rgb(200 0 0)';
-		ctx.fillRect(10, 10, 50, 50);
-		ctx.fillStyle = 'rgb(0 0 200 / 50%)';
-		ctx.fillRect(30, 30, 50, 50);
+
+		ctx.strokeRect(2.5, 2.5, 9, 9);
+		ctx.fillRect(7, 7, 1, 1);
 	}
 	onMount(() => draw());
 </script>
@@ -30,7 +29,7 @@
 			<option value="system">System</option>
 		</select>
 	</header>
-	<canvas id="canvas" bind:this={canvas} width="150" height="150">
+	<canvas id="canvas" bind:this={canvas} width="15" height="15">
 		<p></p>
 	</canvas>
 </div>
